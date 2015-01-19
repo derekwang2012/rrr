@@ -107,7 +107,7 @@ public class BugReportActivity extends Activity {
 
                 final Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"bug" + "reports" + '@' + "redreader" + '.' + "org"}); // no spam, thanks
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"koloumi2000" + '@' + "gmail" + '.' + "com"}); // no spam, thanks
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Bug Report");
                 intent.putExtra(Intent.EXTRA_TEXT, sb.toString());
 

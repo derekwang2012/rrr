@@ -27,6 +27,7 @@ import org.holoeverywhere.preference.PreferenceManager;
 import org.holoeverywhere.preference.SharedPreferences;
 import org.lol.reddit.R;
 import org.lol.reddit.account.RedditAccount;
+import org.lol.reddit.common.Constants;
 import org.lol.reddit.common.General;
 import org.lol.reddit.common.PrefsUtility;
 import org.lol.reddit.fragments.MainMenuFragment;
@@ -143,8 +144,20 @@ public class MainMenuAdapter extends BaseAdapter {
         //items.add(new MainMenuItem("Reddit"));
 
         mainItems.add(makeItem(context.getString(R.string.mainmenu_frontpage), MainMenuFragment.MainMenuAction.FRONTPAGE, null, null));
+
+        //mainItems.add(makeItem(context.getString(R.string.mainmenu_custom), MainMenuFragment.MainMenuAction.CUSTOM, null, null));
+
+        // high lol subreddits
+        for (String name : Constants.Reddit.LOL_SUBREDDITS) {
+            try {
+
+                mainItems.add(makeSubredditItem(RedditSubreddit.stripRPrefix(name)));
+            } catch (RedditSubreddit.InvalidSubredditNameException e) {
+                mainItems.add(makeSubredditItem("Invalid: " + name));
+            }
+        }
+
         mainItems.add(makeItem(context.getString(R.string.mainmenu_all), MainMenuFragment.MainMenuAction.ALL, null, null));
-        mainItems.add(makeItem(context.getString(R.string.mainmenu_custom), MainMenuFragment.MainMenuAction.CUSTOM, null, null));
 
         if (!user.isAnonymous()) {
 
@@ -177,9 +190,10 @@ public class MainMenuAdapter extends BaseAdapter {
 
             if (mainMenuUserItems.contains(MainMenuFragment.MainMenuUserItems.MODMAIL))
                 mainItems.add(makeItem(context.getString(R.string.mainmenu_modmail), MainMenuFragment.MainMenuAction.MODMAIL, null, rrIconEnvOpen));
+
+            mainItems.add(new MainMenuItem(context.getString(R.string.mainmenu_header_subreddits)));
         }
 
-        mainItems.add(new MainMenuItem(context.getString(R.string.mainmenu_header_subreddits)));
 
         //items.add(makeItem("Add Subreddit", null, null, null)); // TODO
 

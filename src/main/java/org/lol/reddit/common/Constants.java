@@ -46,58 +46,21 @@ public final class Constants {
 
     public static final class Reddit {
 
-        public static final String[] DEFAULT_SUBREDDITS = {
-                "/r/announcements",
-                "/r/Art",
-                "/r/AskReddit",
-                "/r/askscience",
-                "/r/aww",
-                "/r/blog",
-                "/r/books",
-                "/r/creepy",
-                "/r/dataisbeautiful",
-                "/r/DIY",
-                "/r/Documentaries",
-                "/r/EarthPorn",
-                "/r/explainlikeimfive",
-                "/r/Fitness",
-                "/r/food",
-                "/r/funny",
-                "/r/Futurology",
-                "/r/gadgets",
-                "/r/gaming",
-                "/r/GetMotivated",
-                "/r/gifs",
-                "/r/history",
-                "/r/IAmA",
-                "/r/InternetIsBeautiful",
-                "/r/Jokes",
-                "/r/LifeProTips",
-                "/r/listentothis",
-                "/r/mildlyinteresting",
-                "/r/movies",
-                "/r/Music",
-                "/r/news",
-                "/r/nosleep",
-                "/r/nottheonion",
-                "/r/oldschoolcool",
-                "/r/personalfinance",
-                "/r/philosophy",
-                "/r/photoshopbattles",
-                "/r/pics",
-                "/r/science",
-                "/r/Showerthoughts",
-                "/r/space",
-                "/r/sports",
-                "/r/television",
-                "/r/tifu",
-                "/r/todayilearned",
-                "/r/TwoXChromosomes",
-                "/r/UpliftingNews",
-                "/r/videos",
-                "/r/worldnews",
-                "/r/writingprompts"
+        public static final String[] LOL_SUBREDDITS = {
+                "/r/SummonerSchool",
+                "/r/LeagueofMemes",
+                "/r/LoLEventVoDs",
+                "/r/LeagueOfLegendsMeta",
+                "/r/LeagueOfGiving",
+                "/r/LoLFanArt",
+                "/r/LoLCodeTrade",
+                "/r/FantasyLCS"
         };
+
+        public static final String OTHER_SUBREDDITS = "LoLTube+TeamSolomid+dignitaslol+LoLChampConcepts+CircLoLJerk+RiotPls+LoLGaymers+LoreOfLeague+CLG+LoLTwistedTreeline"
+                + "+LoLStreams+LoLWallPaper+TeamRedditTeams+BestOfBronze+BestOfTribunal+Summoners";
+
+        public static final String[] DEFAULT_SUBREDDITS = {};
 
         public static final String
                 SCHEME_HTTP = "http",

@@ -98,7 +98,7 @@ public final class PrefsUtility {
     }
 
     public static AppearanceTheme appearance_theme(final Context context, final SharedPreferences sharedPreferences) {
-        return AppearanceTheme.valueOf(getString(R.string.pref_appearance_theme_key, "red", context, sharedPreferences).toUpperCase());
+        return AppearanceTheme.valueOf(getString(R.string.pref_appearance_theme_key, "blue", context, sharedPreferences).toUpperCase());
     }
 
     public static void applyTheme(Activity activity) {

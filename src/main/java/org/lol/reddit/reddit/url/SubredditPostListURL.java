@@ -128,7 +128,7 @@ public class SubredditPostListURL extends PostListingURL {
                 break;
 
             case ALL:
-                builder.encodedPath("/r/all");
+                builder.encodedPath("/r/" + Constants.Reddit.OTHER_SUBREDDITS);
                 break;
 
             case SUBREDDIT:

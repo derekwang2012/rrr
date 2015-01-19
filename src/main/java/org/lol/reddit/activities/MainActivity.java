@@ -39,7 +39,6 @@ import org.lol.reddit.account.RedditAccount;
 import org.lol.reddit.account.RedditAccountChangeListener;
 import org.lol.reddit.account.RedditAccountManager;
 import org.lol.reddit.adapters.MainMenuSelectionListener;
-import org.lol.reddit.cache.CacheManager;
 import org.lol.reddit.common.General;
 import org.lol.reddit.common.LinkHandler;
 import org.lol.reddit.common.PrefsUtility;
@@ -52,7 +51,6 @@ import org.lol.reddit.reddit.things.RedditSubreddit;
 import org.lol.reddit.reddit.url.*;
 import org.lol.reddit.views.RedditPostView;
 
-import java.util.Set;
 import java.util.UUID;
 
 public class MainActivity extends RefreshableActivity
@@ -138,7 +136,7 @@ public class MainActivity extends RefreshableActivity
             edit.putString("firstRunMessageShown", "true");
             edit.commit();
 
-        } else if (sharedPreferences.contains("lastVersion")) {
+        }/* else if (sharedPreferences.contains("lastVersion")) {
 
             final int lastVersion = sharedPreferences.getInt("lastVersion", 0);
 
@@ -178,7 +176,7 @@ public class MainActivity extends RefreshableActivity
         } else {
             sharedPreferences.edit().putInt("lastVersion", appVersion).commit();
             ChangelogDialog.newInstance().show(this);
-        }
+        }*/
 
         addSubscriptionListener();
 

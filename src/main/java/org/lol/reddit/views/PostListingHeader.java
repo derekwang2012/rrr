@@ -20,6 +20,7 @@ package org.lol.reddit.views;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import org.apache.commons.lang3.StringUtils;
 import org.holoeverywhere.widget.LinearLayout;
 import org.holoeverywhere.widget.TextView;
 import org.lol.reddit.views.list.RRTouchable;
@@ -42,7 +43,7 @@ public final class PostListingHeader extends LinearLayout implements RRTouchable
         final Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Light.ttf");
 
         final TextView title = new TextView(context);
-        title.setText(titleText);
+        title.setText(StringUtils.abbreviate(titleText, 33));
         title.setTextSize(22.0f);
         title.setTypeface(tf);
         title.setTextColor(Color.WHITE);
@@ -50,7 +51,7 @@ public final class PostListingHeader extends LinearLayout implements RRTouchable
 
         final TextView subtitle = new TextView(context);
         subtitle.setTextSize(14.0f);
-        subtitle.setText(subtitleText);
+        subtitle.setText(StringUtils.abbreviate(subtitleText, 50));
         subtitle.setTextColor(Color.rgb(200, 200, 200));
         addView(subtitle);
 
